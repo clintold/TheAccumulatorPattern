@@ -344,7 +344,16 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
     #          ** FIRST DO A CONCRETE EXAMPLE BY HAND! **
     ####################################################################
     # ------------------------------------------------------------------
+    rectangle1.attach_to(window)
+    rectangle2.attach_to(window)
+    point1 = rectangle1.get_center()
+    x1 = point1.x
+    y1 = point1.y
+    point2 = rectangle2.get_center()
+    x2 = point2.x
+    y2 = point2.y
 
+    for k in range(n)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
