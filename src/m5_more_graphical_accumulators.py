@@ -29,7 +29,7 @@ def main():
     """ Calls the   TEST   functions in this module. """
     #run_test_draw_squares_from_circle()
     run_test_draw_circles_from_rectangle()
-    #run_test_draw_lines_from_rectangles()
+    run_test_draw_lines_from_rectangles()
 
 
 def run_test_draw_squares_from_circle():
@@ -352,8 +352,18 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
     point2 = rectangle2.get_center()
     x2 = point2.x
     y2 = point2.y
+    drop = rectangle1.get_height()
+    shift = rectangle1.get_width()
+    for k in range(n):
+        line = rg.Line(rg.Point(x1,y1),rg.Point(x2,y2))
+        line.attach_to(window)
+        x1 -= shift/2
+        y1 += drop/2
+        x2 -= shift/2
+        y2 += drop/2
+        window.render()
 
-    for k in range(n)
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
